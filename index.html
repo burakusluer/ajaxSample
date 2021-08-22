@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Ajax deneme sayfası</title>
+</head>
+<body>
+<div class="icerik"></div>
+
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded",function () {
+
+        $.ajax({
+            'type':"POST",
+            'url':"hedef.html",
+            'success':function (response) {
+                alert("hedef.html dosyası class.icerik divinizin içinde boş olan en son yere eklendi");
+                $(".icerik").append(response);
+            }
+        })
+    })
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</body>
+</html>
